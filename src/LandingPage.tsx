@@ -6,6 +6,9 @@ import { Hero } from "./Hero";
 import { MarketSection } from "./Market";
 import { AboutUsSection } from "./AboutUs";
 import { ForexNewsSection } from "./ForexNews";
+import { StarSparkleChartSection } from "./ChartSection";
+import { TestimonialsSection } from "./Testimonials";
+import { FooterSection } from "./Footer";
 
 function LandingPage() {
   const [modal, setModal] = useState<"login" | "signup" | null>(null);
@@ -28,6 +31,9 @@ function LandingPage() {
         <MarketSection/>
         <AboutUsSection/>
         <ForexNewsSection/>
+        <StarSparkleChartSection/>
+        <TestimonialsSection/>
+        <FooterSection/>
       </div>
     </>
   );
