@@ -1,7 +1,4 @@
-/**
- * FooterSection.tsx
- * Modern dark footer with extra padding, animated buttons, and refined design.
- */
+
 import  { FC, useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
@@ -17,7 +14,6 @@ export const FooterSection: FC = () => {
   return (
     <footer className="bg-black bg-gradient-to-t from-gray-900 text-gray-400">
       <div className="container mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* Brand & Newsletter */}
         <div className="space-y-6">
           <h3 className="text-3xl text-blue-300 font-bold">CryptoWave</h3>
           <p className="text-sm">
@@ -52,7 +48,6 @@ export const FooterSection: FC = () => {
           )}
         </div>
 
-        {/* Company Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +65,6 @@ export const FooterSection: FC = () => {
           </ul>
         </motion.div>
 
-        {/* Support Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -88,7 +82,6 @@ export const FooterSection: FC = () => {
           </ul>
         </motion.div>
 
-        {/* Social Icons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,7 +104,6 @@ export const FooterSection: FC = () => {
         </motion.div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-800 pt-4">
         <div className="text-center text-sm text-gray-600">
           © {new Date().getFullYear()} CryptoWave. All rights reserved.
