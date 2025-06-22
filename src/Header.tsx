@@ -4,7 +4,7 @@ import { FC } from "react";
 const navItems = [
   { label: 'Home', href: '#hero' },
   { label: 'Market', href: '#market' },
-  { label: 'News', href: '#news' },
+  { label: 'About Us', href: '#news' },
   { label: 'Forex', href: '#forex' },
   { label: 'About', href: '#about' },
 ];
