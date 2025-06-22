@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.gradient-anim {
+  background: linear-gradient(
+    to right,
+    #6b21a8,
+    #14b8a6
+  );
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.4; }
+}
+.flicker-anim {
+  animation: flicker 3s linear infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0ch; }
+  to { width: 20ch; }
+}
+@keyframes blinkCursor {
+  0%, 100% { border-color: #06b6d4; }
+  50% { border-color: transparent; }
+}
+.typewriter-anim {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation:
+    typewriter 4s steps(20) 1 forwards,
+    blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+  50% { opacity: 1; transform: translateY(-20px) scale(1.2); }
+}
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+ 
