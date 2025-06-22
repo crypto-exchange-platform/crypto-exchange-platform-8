@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { MarketSection } from "./Market";
+import { AboutUsSection } from "./AboutUs";
+import { ForexNewsSection } from "./ForexNews";
 
 function LandingPage() {
   const [modal, setModal] = useState<"login" | "signup" | null>(null);
@@ -24,6 +26,8 @@ function LandingPage() {
         />
         <Hero />
         <MarketSection/>
+        <AboutUsSection/>
+        <ForexNewsSection/>
       </div>
     </>
   );
