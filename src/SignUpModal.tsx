@@ -1,5 +1,6 @@
 import { FC, ChangeEvent, FormEvent, useEffect, useState } from "react";
 import axios from "axios";
+import useSparkles from "./hooks/ModalWithSparkles";
 
 interface SignupModalProps {
   onClose: () => void;
@@ -7,6 +8,7 @@ interface SignupModalProps {
 }
 
 export const SignupModal: FC<SignupModalProps> = ({ onClose, onSignupSuccess }) => {
+  const sparkles = useSparkles(50);
   const [countries, setCountries] = useState<any[]>([]);
   const [dialCodes, setDialCodes] = useState<any[]>([]);
   const [error, setError] = useState("");
@@ -84,15 +86,18 @@ export const SignupModal: FC<SignupModalProps> = ({ onClose, onSignupSuccess }) 
               : window.location.hostname,
         }
       );
-      onClose();           
-      onSignupSuccess();   
+      onClose();
+      onSignupSuccess();
     } catch (err: any) {
       setError(err.response?.data?.message || "Signup failed.");
     }
-  }; 
+  };
+ 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 overflow-auto">
-      <div className="bg-violet-950/40 w-full max-w-xl p-6 rounded-md shadow-lg relative">
+      <div className="bg-black w-full max-w-xl p-6 rounded-md shadow-lg relative">
+            <div className="sparkles-container">{sparkles}</div>
+
         <button
           onClick={onClose}
           className="absolute right-4 top-4 text-xl cursor-pointer"
@@ -188,7 +193,7 @@ export const SignupModal: FC<SignupModalProps> = ({ onClose, onSignupSuccess }) 
           )}
           <button
             type="submit"
-            className="w-full bg-violet-950 text-white py-2 rounded col-span-full hover:bg-gray-900 cursor-pointer"
+            className="w-full bg-white  text-black py-2 rounded col-span-full hover:bg-gray-900 cursor-pointer"
           >
             Sign Up
           </button>
