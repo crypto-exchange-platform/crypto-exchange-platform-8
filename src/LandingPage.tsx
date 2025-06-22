@@ -3,6 +3,7 @@ import { SignupModal } from "./SignUpModal";
 import { useState } from "react";
 import { Header } from "./Header";
 import { Hero } from "./Hero";
+import { MarketSection } from "./Market";
 
 function LandingPage() {
   const [modal, setModal] = useState<"login" | "signup" | null>(null);
@@ -22,6 +23,7 @@ function LandingPage() {
           onSignup={() => setModal("signup")}
         />
         <Hero />
+        <MarketSection/>
       </div>
     </>
   );
